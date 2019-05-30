@@ -1,19 +1,21 @@
 {
-  test: "test/*.js",
-  exclude: [
+  "test": "test/*.js",
+  "exclude": [
     "/node_modules/",
     "/resources/"
   ],
-  use: {
-    loader: "babel-loader",
-    options: {
-      presets: [
-        "path.resolve( __dirname, ./node_modules/@babel/preset-env )",
-       {
-         targets: {
-           chrome: 68
-         }
-       }
+  "use": {
+    "loader": "babel-loader",
+    "options": {
+      "presets": [
+       [
+         "env",
+        {
+         "targets": {
+          "chrome": 68
+            }
+          }
+        ]
       ]
     }
   }
