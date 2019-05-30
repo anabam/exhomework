@@ -6,7 +6,7 @@ import app from '../app';
 chai.use(chaiHttp);
 chai.should();
 
-describe("Students", () => {
+describe("fibs", () => {
   describe("GET /:5", () => {
     // Test the fibs endpoint
     it("should return fibs with N=5", (done) => {
