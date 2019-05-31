@@ -1,22 +1,7 @@
 {
-  "test": "test/*.js",
+  "presets": ["@babel/preset-env"],
   "exclude": [
     "/node_modules/",
     "/resources/"
-  ],
-  "use": {
-    "loader": "babel-loader",
-    "options": {
-      "presets": [
-       [
-         "env",
-        {
-         "targets": {
-          "chrome": 68
-            }
-          }
-        ]
-      ]
-    }
-  }
+  ]
 }
