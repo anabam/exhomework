@@ -12,26 +12,18 @@ describe("fibs", () => {
     var expect = chai.expect;
     it("should return fibs with N=6", (done) => {
       chai.request(app)
-        .get('/')
+        .get('/fibs/6')
         .end((err, res) => {
           res.should.have.status(200);
           res.body.should.be.a('object');
-          expect(res.body).to.deepEqual({
-            "sequence": [
+          expect(res.body.sequence).to.eql([
             1,
             1,
             2,
             3,
             5,
             8
-          ],
-            "report": {
-            "number": "8",
-              "length": 1,
-              "iterations": "6",
-              "ms": 2
-          }
-          })
+          ])
           done();
         });
     });

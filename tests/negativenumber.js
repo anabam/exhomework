@@ -11,10 +11,9 @@ describe("fibs", () => {
     // Test the fibs endpoint
     it("should return fibs with N=-5", (done) => {
       chai.request(app)
-        .get('/')
+        .get('/fibs/-5')
         .end((err, res) => {
           res.should.have.status(500);
-          res.body.should.be.a('object');
           done();
         });
     });
